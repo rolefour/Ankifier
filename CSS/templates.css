@@ -1,0 +1,48 @@
+/*
+*	./CSS/templates.css
+*/
+
+
+
+
+
+
+
+
+
+
+
+/* --- CONJUGATION TABLE --- */
+
+.vtab {
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.vtab td, .vtab th {
+	padding: 6px 0;
+	line-height: 2em;
+}
+
+.vtab th:nth-child(1) {
+	width: 120px;
+	padding-left: 10px;
+}
+
+.vtab-sub {
+	text-align: center;
+	background-color: #f6f6f6 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- EOF --- */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>： やるべき事：SE</title>
+	<link rel="icon" type="image" href=./assets/icon.png>
+
+	<link rel="stylesheet" href="./CSS/all.css">
+	<link rel="stylesheet" href="./CSS/anki.css">
+
+	<script src="./JS/startTime.js"></script>
+</head>
+
+<body onload="startTime()">
+	<header>
+		<div class=title>アンキファイアー</div>
+		<nav id=nav>
+			<a href="リソース.html"><img src="./assets/nav/NAV/view_timeline.svg" width=26px><br>リソース</a>
+			<a class=current href=""><img src="./assets/nav/NAV/dataset_filled.svg" width=26px><br>やるべき事</a>
+			<a href="文法.html"><img src="./assets/nav/NAV/bookmark.svg" width=26px/><br>文法</a>
+		</nav>
+		<container id=langswitch>
+			<a href="やるべき事.html">日本語</a>
+			<a href="" class=active>スウェーデン語</a>
+		</container>
+		<container>
+			<a href="#unit1">Unit 1</a>
+			<a class=inactive href="">Unit 2</a>
+		</container>
+	</header>
+
+<main>
+	<section class=vocab id=unit1><h1>Unit 1<a class=hlink href=#top><b>⏶</b></a></h1>
+				<h1>och</h1>
+		<tags><nx>#1</nx><conjunction/></tags>
+		<h1>Translation</h1>and
+
+		<h1>äta</h1>
+		<tags><nx>#1</nx><verb></verb></tags>
+		<h1>Translation</h1>(to) eat
+		<h1>Conjugation</h1>
+		<table class="se-conj"><tbody><tr><th>Infinitive</th><td>äta</td></tr><tr><th>Present</th><td>äter</td></tr><tr><th>Past</th><td>åt</td></tr><tr><th>Supine</th><td>ätit</td></tr></tbody></table>
+
+		<h1>läsa</h1>
+		<tags><nx>#1</nx><verb></verb></tags>
+		<h1>Translation</h1>(to) read
+		<h1>Conjugation</h1>
+		<table class="se-conj">
+			<tr><th>Infinitive</th><td>läsa</td></tr>
+			<tr><th>Present</th><td>läser</td></tr>
+			<tr><th>Past</th><td>läste</td></tr>
+			<tr><th>Supine</th><td>läst</td></tr>
+		</table>
+	</section>
+</main>
+
+
+
+<!-- TIME WIDGET AND PROGRESS BAR -->
+<div class=time><div id="txt"></div></div>
+<div class="progress-container header"><div class="progress-bar" id="myBar"></div></div>
+<script src="./JS/progressBar.js"></script>
+
+</body>

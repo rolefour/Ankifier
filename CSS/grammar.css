@@ -1,0 +1,57 @@
+/*
+*	./CSS/grammar.css
+*/
+
+
+
+
+
+toc, toc * {
+	font-family: 'Roboto', sans-serif;
+}
+
+toc {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px
+}
+
+toc a {
+	flex: 1 1 0;
+	text-decoration: none;
+	color: black;
+	background: var(--grey);
+	padding: 10px;
+	border-radius: 12px;
+}
+
+toc a:hover {
+	background: var(--blue100);
+}
+
+toc a num {
+	padding: 0 32px 0 20px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+toc a br {
+	content: "";
+	display: block;
+	height: .7em;
+}
+
+toc a.wip {
+	background: white;
+	border: 2px solid;
+}
+
+toc a.wip:hover {
+	background: var(--grey);
+}
+
+
+
+
+
+/* --- EOF --- */

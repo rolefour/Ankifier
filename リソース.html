@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>： リソース</title>
+	<link rel="icon" type="image" href=./assets/icon.png>
+
+	<link rel="stylesheet" href="./CSS/all.css">
+	<link rel="stylesheet" href="./CSS/resources.css">
+
+	<script src="./JS/kanaswitch.js"></script>
+	<script src="./JS/wanakana.min.js"></script>
+	<script src="./JS/startTime.js"></script>
+
+</head>
+<body onload="startTime()">
+	<header>
+		<div class=title>アンキファイアー</div>
+		<nav id=nav>
+			<a class=current href=""><img src="./assets/nav/NAV/view_timeline_filled.svg" width=26px/><br>リソース</a>
+			<a href="やるべき事.html"><img src="./assets/nav/NAV/dataset.svg" width=26px/><br>やるべき事</a>
+			<a href="文法.html"><img src="./assets/nav/NAV/bookmark.svg" width=26px/><br>文法</a>
+		</nav>
+	</header>
+
+<main>
+	<section>
+		<h1>ハイパーリンク</h1>
+		<table class=links>
+			<tr>
+				<td><a target="_blank" href="https://www.japanisch-grund-und-intensivkurs.de/"><img src="./assets/icons/1.png" width="52"></a></td><td><b>Japanisch Grund- und Intensivkurs</b><br>Japanisch über die Grammatik lernen</td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="https://jisho.org/"><img src="./assets/icons/2.png" width="52"></a></td><td><b>Jisho.org</b><br>Jisho is a powerful Japanese-English dictionary. It lets you find words, kanji, example sentences and more quickly and easily.</td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="https://www.japaneseverbconjugator.com/default.asp"><img src="./assets/icons/3.jpg" width="52" height="52"></a></td><td><b>Ultra Handy Japanese Verb Conjugator</b><br>The only site on the web featuring Japanese verb conjugation pictures of alien monsters.</td>
+			</tr>
+
+			<tr>
+				<td>
+					<a target="_blank" href="https://www.tanoshiijapanese.com/">
+						<img src="https://www.tanoshiijapanese.com/apple-touch-icon-180.png" width="52">
+					</a>
+				</td>
+				<td>
+					<b>楽しい Japanese</b><br>楽しい Japanese is a site dedicated to making learning the Japanese language a fun and enjoyable experience for you.<br>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<a target="_blank" href="https://nihongodera.com/">
+						<img src="./assets/icons/4.png" width="52">
+					</a>
+				</td>
+				<td>
+					<b>NihongoDera</b><br>The only Japanese language reference you need<br>
+				</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<div id="hiragana" style="display:block">
+			<h1>ひらがな<button type="button" onclick="kanaswitch()">🗘&nbsp;  SWITCH</button></h1>
+			<kana><item>ん</item><item>わ</item><item>ら</item><item>や</item><item>ま</item><item>は</item><item>な</item><item>た</item><item>さ</item><item>か</item><item>あ</item></kana><kana><item class=empty></item><item class=empty></item><item>り</item><item class=empty></item><item>み</item><item>ひ</item><item>に</item><item>ち</item><item>し</item><item>き</item><item>い</item></kana><kana><item class=empty></item><item class=empty></item><item>る</item><item>ゆ</item><item>む</item><item>ふ</item><item>ぬ</item><item>つ</item><item>す</item><item>く</item><item>う</item></kana><kana><item class=empty></item><item class=empty></item><item>れ</item><item class=empty></item><item>め</item><item>へ</item><item>ね</item><item>て</item><item>せ</item><item>け</item><item>え</item></kana><kana><item class=empty></item><item>を</item><item>ろ</item><item>よ</item><item>も</item><item>ほ</item><item>の</item><item>と</item><item>そ</item><item>こ</item><item>お</item></kana>
+			<input type="text" id="hiraganaInput" placeholder="Type in to convert to ひらがな">
+			<script>
+				var textInput = document.getElementById('hiraganaInput');
+				wanakana.bind(textInput,); 
+			</script>
+		</div>
+
+		<div id="katakana" style="display:none">
+			<h1>カタカナ<button type="button" onclick="kanaswitch()">🗘&nbsp;  SWITCH</button></h1>
+			<kana><item>ン</item><item>ワ</item><item>ラ</item><item>ヤ</item><item>マ</item><item>ハ</item><item>ナ</item><item>タ</item><item>サ</item><item>カ</item><item>ア</item></kana><kana><item class=empty></item><item class=empty></item><item>リ</item><item class=empty></item><item>ミ</item><item>ヒ</item><item>ニ</item><item>チ</item><item>シ</item><item>キ</item><item>イ</item></kana><kana><item class=empty></item><item class=empty></item><item>ル</item><item>ユ</item><item>ム</item><item>フ</item><item>ヌ</item><item>ツ</item><item>ス</item><item>ク</item><item>ウ</item></kana><kana><item class=empty></item><item class=empty></item><item>レ</item><item class=empty></item><item>メ</item><item>ヘ</item><item>ネ</item><item>テ</item><item>セ</item><item>ケ</item><item>エ</item></kana><kana><item class=empty></item><item>ヲ</item><item>ロ</item><item>ヨ</item><item>モ</item><item>ホ</item><item>ノ</item><item>ト</item><item>ソ</item><item>コ</item><item>オ</item></kana>
+			<input type="text" id="katakanaInput" placeholder="Type in to convert to カタカナ">
+			<script>
+				var textInput = document.getElementById('katakanaInput');
+				wanakana.bind(textInput, {IMEMode:'toKatakana'}); 
+			</script>
+		</div>
+	</section>
+</main>
+
+
+
+
+
+<div class=time><div id="txt"></div></div>
+<div class="progress-container header"><div class="progress-bar" id="myBar"></div></div>
+<script src="./JS/progressBar.js"></script>
+</body>

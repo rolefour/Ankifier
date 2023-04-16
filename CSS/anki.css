@@ -1,0 +1,169 @@
+/*
+*	./CSS/anki.css
+*/
+
+
+
+
+
+/* --- MISC --- */
+
+header container#langswitch {
+	width: 280px;
+}
+
+header container#langswitch a.active {
+	background: var(--blue100);
+}
+
+note {
+	font-size: 14px;
+	color: #666;
+}
+
+
+
+
+
+/* --- Tags --- */
+
+tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+tags * {
+	padding: 2px 8px 4px;
+}
+
+nx, noun, verb, adv, no, suru, suffix, prenoun, exp, pronoun, conjunction {
+	background-color: var(--grey);
+	border-radius: 100px;
+}
+
+nx::before {content: "⚑ ";}
+
+noun::after {content: "◆ noun";}
+noun {background: var(--blue100);}
+nounsub {background: var(--blue50);}
+suru {background: var(--blue50);}
+
+adv::after {content: "◆ adverb";}
+adv {background: var(--green100);}
+advsub {background: var(--green50);}
+
+verb::after {content: "◆ verb";}
+verb {background: var(--red100);}
+verbsub {background: var(--red50);}
+
+adj::after {content: "◆ adjective";}
+adj {background: var(--amber100);}
+adjsub {background: var(--amber50);}
+
+pronoun::after {content: "◆ pronoun";}
+pronoun {background-color: var(--bluegrey100);}
+pronounsub {background-color: var(--bluegrey50);}
+
+no::before {content: "の";}
+suru::before {content: "する";}
+suffix::before {content: "＊ suffix";}
+prenoun::before {content: "＊ prenoun";}
+exp::before {content: "＊ expression";}
+conjunction::before  {content: "＊ conjunction";}
+
+multitag {padding: 2px 0 4px;}
+multitag * {border-radius: 100px 0 0 100px;}
+
+nounsub, advsub, verbsub, adjsub, pronounsub {
+	border-radius: 0 100px 100px 0;
+}
+
+
+
+
+
+/* --- Vocab card fixes --- */
+
+.vocab h1:first-child {
+	font-size: 28px;
+}
+
+.vocab h1:not(:first-child) {
+	font-size: 22px;
+	padding-top: 30px;
+}
+
+.vocab h1:has(ruby)::before {
+	content: "・ ";
+	margin-left: -22px;
+}
+
+.vocab h1:has(ruby) {
+	margin-top: 20px;
+}
+
+
+
+
+
+/* --- SVENSKA: Definitive form table --- */
+
+.se-def, .se-conj {
+	border-collapse: collapse;
+	border-radius: 12px;
+	background: var(--grey);
+	text-align: center;
+	width: 200px;
+	margin-top: 12px;
+}
+
+.se-def tr th{
+	border-bottom: 2px solid white;
+	line-height: 2em;
+	width: 50%;
+}
+
+.se-def tr td, .se-conj tr td {
+	padding: 10px 0;
+}
+
+.se-conj tr th, .se-conj tr td {
+	border-bottom: 2px solid white;
+	width: 50%;
+}
+
+
+
+
+
+/* --- SVENSKA: Table in container --- */
+
+container table {
+	border-collapse: separate;
+	border-spacing: 0 6px;
+	background: var(--grey);
+	border-radius: 20px;
+	min-width: 260px;
+	max-width: 260px;
+	margin-top: 6px;
+}
+
+container table tr td {
+	padding: 8px 14px;
+}
+
+container table tr th {
+	border-bottom: 2px solid white;
+	line-height: 2em;
+}
+
+
+
+
+
+
+/* --- EOF --- */

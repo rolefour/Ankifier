@@ -1,0 +1,361 @@
+/*
+*	./CSS/all.css
+*
+*	Variables, basic page and components
+*	must be loaded first !
+*
+*/
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+	--accent: #2196F3;
+	--subaccent: #1976D2;
+	--alphaaccent: #2196F322;
+	--linecolor: #ccc;
+	--boxradius: 16px;
+
+	--grey: #f2f2f2;
+	--notecolor: #222;
+
+	--blue50: #E3F2FD;
+	--blue100: #BBDEFB;
+	--blue300: #64B5F6;
+	--blue500: #2196F3;
+
+	--blue100alpha:	#BBDEFB22;
+
+
+	--green50: #E8F5E9;
+	--green100: #C8E6C9;
+
+	--red50: #FFEBEE;
+	--red100: #FFCDD2;
+
+	--amber50: #FFF8E1;
+	--amber100: #FFECB3;
+
+	--bluegrey50 : #ECEFF1;
+	--bluegrey100: #CFD8DC;
+}
+
+::selection {background: var(--alphaaccent)}
+::-webkit-scrollbar {display: none;}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: var(--grey);
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+/* ---DEBUGGING
+*{outline: .5px solid red;}
+*/
+
+
+
+
+
+/* --- NAVIGATION --- */
+
+header {
+	background: white;
+	text-align: center;
+	font-weight: 500;
+	margin: 0;
+	box-shadow: 10px 0 3px 1px rgba(0,0,0,.2);
+}
+
+.title {
+	padding: 68px 36px;
+	color: black;
+	font-size: 36px;
+}
+
+nav {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 240px;
+	gap: 4px;
+}
+
+nav a {
+	flex: 1 1 0;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	color: #555;
+	padding-bottom: 12px;
+}
+
+nav a img {
+	border-radius: 16px;
+	padding: 7px 18px;
+	margin-bottom: 2px;
+	transition: all 100ms ease-in-out;
+}
+
+nav a:not(.current) img {
+	filter: opacity(70%);
+}
+
+nav a:hover:not(.current) img {
+	background-color: var(--alphaaccent);
+	transform: scale(1.04);
+}
+
+
+nav a.current {color: black}
+nav a.current img {
+	background: var(--blue100);
+}
+
+
+
+
+
+/* --- FLEX CONTAINER --- */
+
+container {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: auto;
+	max-width: 100%;
+	margin: 10px -4px -4px;
+	gap: 8px;
+	max-width: 840px;
+	margin: 0 -30px;
+	padding: 0 26px;
+}
+
+container item {
+	font-size: 16px;
+	background-color: var(--grey);
+	border-radius: 12px;
+	padding: 10px;
+	flex: 0 0 auto;
+	width: 200px !important;
+}
+
+container item:has(ruby) {
+	padding-top: 16px;
+}
+
+header container {
+	font-family: 'Noto Sans JP', sans-serif;
+	width: 500px;
+	margin: 0 auto;
+	padding: 0;
+	padding-bottom: 10px;
+	border-radius: 0;
+	gap: 4px;
+}
+
+header container a  {
+	background: transparent;
+	box-shadow: none;
+	font-weight: bold;
+	text-decoration: none;
+	width: 50%;
+	color: #222;
+	border-radius: 32px;
+	margin: 0;
+	padding: 10px;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+header container a:hover {
+	background: transparent;
+	background: var(--blue50);
+	color: #222;
+	box-shadow: none;
+}
+
+header container a.inactive {
+	color: #999;
+}
+
+header container a.inactive:hover {
+	color: #777;
+	background: none;
+}
+
+
+
+
+
+/* --- CONTENTBOX --- */
+
+main {
+	max-width: 800px;
+	margin: auto;
+}
+
+section {
+	background: white;
+	margin: auto;
+	padding: 30px;
+	margin: 40px 0;
+	border-radius: var(--boxradius);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+section:hover {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+section h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: 300;
+	margin: -4px 0 10px;
+}
+
+
+
+
+
+/* --- INPUT ELEMENTS --- */
+
+button {
+	font-family: 'Roboto', sans-serif;
+	background: var(--blue50);
+	color: var(--blue500);
+	font-weight: bold;
+	border: none;
+	border-radius: 24px;
+	padding: 10px 12px;
+	float: right;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: 250ms ease-in-out;
+}
+
+button:hover {
+	background: var(--blue100);
+}
+
+input {
+	font-family: 'Noto Sans JP', sans-serif;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 48px;
+	padding: 12px;
+	margin: 14px 0 2px;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+}
+
+/* DESIGN 1
+input {border: 1px solid #c0c0c0;border-radius: 4px;}
+input:focus {border: 2px solid var(--accent);}
+*/
+
+
+/* DESIGN 2 */
+input {
+	color: #666;
+	border-bottom: 1px solid #555;
+	border-radius: 8px 8px 0 0;
+	background: var(--grey);
+}
+
+input:focus {
+	border-bottom: 2px solid var(--accent);
+	background: var(--alphaaccent);
+}
+
+
+
+
+
+/* --- MISC --- */
+
+rt {
+	font-size: .7em;
+}
+
+hr {
+	border: 0;
+	border-top: .5px solid;
+	margin: -10px -4px 10px;
+}
+
+.time {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: white;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background: var(--accent);
+	border-radius: var(--boxradius);
+	padding: 12px 20px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	transition: background-color 0.3s ease;
+}
+
+.time:hover {
+	background-color: var(--subaccent); /* Darker green */
+}
+
+.progress-container {
+	width: 100%;
+	height: 7px;
+	background: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.progress-bar {
+	height: 7px;
+	background: black;
+	width: 0;
+}
+
+
+
+
+
+/* --- HEADER LINKS --- */
+
+.hlink {
+	text-decoration: none;
+	color: var(--subaccent);
+	float: right;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	background: var(--blue50);
+	padding: 8px 12px;
+	border-radius: 18px;
+}
+
+.hlink:hover {
+	background: var(--blue100);
+}
+
+
+
+
+
+/* --- EOF --- */
